@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADM</title>
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sarala:wght@400;700&family=Special+Gothic+Condensed+One&family=Special+Gothic+Expanded+One&display=swap');
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="seta-topo-esquerda">
+            <a href="fases.html" title="Voltar ao Início">
+                <svg xmlns="http://www.w3.org/2000/svg" height="25" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
+                </svg>
+            </a>
+        </div>
+
+        <div class="titulo">
+            <h1>ADM</h1>
+        </div>
+
+        <div class="menu-links">
+            <a href="index.html">Início</a>
+            <a href="fases.html">Setores</a>
+            <a href="conquistas.html">Conquistas</a>
+            <a href="suporte.html">Suporte</a>
+        </div>
+    </header>
+
+    <div class="question">
+        <p><strong>Questão 1:</strong> Qual é a capital do Brasil?</p>
+        <div class="alternatives">
+            <p class="alt" data-correct="false">A) São Paulo</p>
+            <p class="alt" data-correct="false">B) Rio de Janeiro</p>
+            <p class="alt" data-correct="true">C) Brasília</p> <!-- Resposta correta -->
+            <p class="alt" data-correct="false">D) Salvador</p>
+        </div>
+        <button class="confirm-btn">Confirmar Resposta</button>
+    </div>
+
+    <div class="question">
+        <p><strong>Questão 2:</strong> Qual é o maior planeta do sistema solar?</p>
+        <div class="alternatives">
+            <p class="alt" data-correct="false">A) Terra</p>
+            <p class="alt" data-correct="true">B) Júpiter</p> <!-- Resposta correta -->
+            <p class="alt" data-correct="false">C) Saturno</p>
+            <p class="alt" data-correct="false">D) Marte</p>
+        </div>
+        <button class="confirm-btn">Confirmar Resposta</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

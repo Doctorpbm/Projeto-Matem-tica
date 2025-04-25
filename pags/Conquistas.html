@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Conquistas</title>
+  <link rel="stylesheet" href="conquistas.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <div class="seta-topo-esquerda">
+      <a href="index.html" title="Voltar ao Início">
+        <svg xmlns="http://www.w3.org/2000/svg" height="25" fill="currentColor" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
+        </svg>
+      </a>
+    </div>
+
+    <div class="titulo">
+      <h1>Conquistas por Setores</h1>
+    </div>
+
+    <div class="menu-links">
+      <a href="index.html">Início</a>
+      <a href="fases.html">Setores</a>
+      <a href="conquistas.html">Conquistas</a>
+      <a href="suporte.html">Suporte</a>
+    </div>
+  </header>
+
+  <div id="setores" style="margin-top: 80px; width: 100%; display: flex; flex-direction: column; align-items: center;"></div>
+
+  <script>
+    const setores = [
+      { nome: "ADM", chave: "resultadosADM" },
+      { nome: "RH", chave: "resultadosRH" },
+      { nome: "Financeiro", chave: "resultadosFinanceiro" },
+      { nome: "Vendas", chave: "resultadosVendas" }
+    ];
+
+    const container = document.getElementById('setores');
+
+    setores.forEach(setor => {
+      const resultados = JSON.parse(localStorage.getItem(setor.chave)) || [];
+      const total = resultados.length;
+      const acertos = resultados.filter(r => r.correct).length;
+      const porcentagem = total > 0 ? Math.round((acertos / total) * 100) : 0;
+
+      const setorDiv = document.createElement('div');
+      setorDiv.className = 'setor';
+
+      setorDiv.innerHTML = `
+        <h2 style="color: white; margin-bottom: 10px;">${setor.nome}</h2>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: ${porcentagem}%;">${porcentagem}%</div>
+        </div>
+        <div class="percentage">Acertos: ${acertos} de ${total}</div>
+      `;
+
+      container.appendChild(setorDiv);
+    });
+  </script>
+
+</body>
+</html>

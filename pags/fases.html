@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fases</title>
+    <link rel="stylesheet" href="menufases.css">
+    <!-- livraria de onde a imagem bonitinha da seta vem -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sarala:wght@400;700&display=swap');
+        </style>
+</head>
+
+<body>
+    <h1>Escolha o setor</h1>
+
+    <!-- Criei uma div que engloba tofod od monitores pra ficar mais enxuto -->
+    <div class="monitores-cantos">
+        <div class="monitor adm">
+            <a href="adm.html">
+                <!-- A sintaxe input substitui a função de botão e funcionamelhor com imagens -->
+                <input type="image" src="imgs/adm.png" alt="monitor">
+                 
+            </a>      
+        </div>
+        
+        <div class="monitor financeiro">
+            <a href="financeiro.html">
+                <input type="image" src="imgs/fin.png" alt="monitor">
+                
+        </div>
+        
+        <div class="monitor rh">
+            <a href="rh.html">
+                <input type="image" src="imgs/rh.png" alt="monitor">
+                
+        </div>
+
+        <div class="monitor vendas">
+            <a href="vendas.html">
+                <input type="image" src="imgs/ven.png" alt="monitor">
+                
+        </div>
+    </div>
+    
+    <!-- configuração da seta mas essa foi o gepeto que fez kk -->
+    <a href="index.html" class="seta-topo-esquerda" title="Voltar ao Início">
+        <svg xmlns="http://www.w3.org/2000/svg"  height="30" fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
+          </svg>
+    </a>
+</body>
+</html>

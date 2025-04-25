@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-image: url(imgs/banco.png);
+    background-color: #f1f2f2;
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    background-position: center center; 
+    font-family: "Sarala", sans-serif;
+    display: flex;
+    justify-content: top; 
+    align-items: center; 
+    height: 100vh; 
+    margin: 0; 
+    text-align: center;
+    flex-direction: column;
+    
+  
+}
+
+
+h1 {
+    
+    text-align: center;
+    font-size: 2em;
+    margin-top: 20px;
+    color: #2c3e50;
+    
+}
+
+
+/* configura TODOS os monitors para ficarem nas posições  */
+.monitores-cantos {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+}
+
+/* configuração do tamanho dos monitores */
+.monitor {
+    position: absolute;
+    width: clamp(150px, 20vw, 250px); /* faz com que as imagens se ajustem com o tamanho da tela */
+    pointer-events: auto; /* faz com que os monitores sejam interativos */
+    transition: transform 0.2s;
+}
+
+.monitor input[type="image"] {
+    width: 100%;
+    height: auto;
+    transition: transform 0.2s;
+}
+
+.monitor:hover{
+    transform: scale(1.1);
+}
+
+/* configuração da posição dos monitores */
+.adm {
+    top: 50px;
+    left: 100px;
+}
+
+.rh {
+    top: 50px;
+    right: 100px;
+}
+
+.financeiro{
+    bottom: 40px;
+    left: 100px;
+}
+
+.vendas {
+    bottom: 40px;
+    right: 100px;
+}
+
+/* configuração da seta de voltar */
+.seta-topo-esquerda {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.781);
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out, color 0.1s ease-in-out;
+    z-index: 1000; /* faz com que a seta fique no topo da página acima das imagens */
+    align-items: center;
+    justify-content: center;
+}
+
+/* corzinha pra interação com a seta */
+.seta-topo-esquerda:hover {
+    color: #0c4485;
+    transform: scale(1.2)
+}
